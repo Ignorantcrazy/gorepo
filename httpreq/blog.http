@@ -1,0 +1,92 @@
+
+
+###
+GET  http://127.0.0.1:5000/auth?username=test&password=test123 HTTP/1.1
+
+###
+GET http://127.0.0.1:5000/api/v1/tags?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjMiLCJleHAiOjE1OTk4MjMwNjMsImlzcyI6Imdpbi1ibG9nIn0.vmRzoSSwAQ1yGJzXfVBRfKTAgjqB7RaBveptfxEIUyo HTTP/1.1
+
+###
+
+POST http://127.0.0.1:5000/api/v1/tags?name=test&state=0&created_by=ttt&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJwYXNzd29yZCI6InRlc3QxMjMiLCJleHAiOjE1OTk4MjMwNjMsImlzcyI6Imdpbi1ibG9nIn0.vmRzoSSwAQ1yGJzXfVBRfKTAgjqB7RaBveptfxEIUyo HTTP/1.1
+
+###
+
+DELETE http://127.0.0.1:5000/api/v1/tags/23 HTTP/1.1
+
+###
+
+GET  http://127.0.0.1:5000/api/v1/articles HTTP/1.1
+
+###
+
+GET  http://127.0.0.1:5000/api/v1/articles/1 HTTP/1.1
+
+###
+
+POST http://127.0.0.1:5000/api/v1/articles?tag_id=24&title=test1&desc=teswt-desc&content=test-content&created_by=test-created&state=1 HTTP/1.1
+
+###
+
+PUT http://127.0.0.1:5000/api/v1/articles/1?tag_id=24&title=test1&desc=teswt-desc&content=test-content&created_by=test-created&state=0 HTTP/1.1
+
+
+###
+
+POST http://127.0.0.1:5000/api/v1/tags HTTP/1.1
+content-type: application/json
+
+{
+    "name": "namename",
+    "state": 1,
+    "created_by": "ttt"
+}
+
+###
+
+POST http://127.0.0.1:9999/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "asong",
+    "nickname": "golang梦工厂",
+    "email": "7418.com",
+    "password": "123",
+    "age": 140
+}
+
+###
+
+POST http://127.0.0.1:9999/register?email=7418.com&username=asong HTTP/1.1
+
+
+
+###
+
+POST https://localhost:44389/api/nms/v1/vqd/list HTTP/1.1
+content-type: application/json
+
+[
+    "1c1f9345fe2e49b497134e260118eccd",
+    "eef3bc50d30f4da293566fe1f022bde0"
+]
+
+###
+
+POST http://113.200.142.236:8012/api/nms/v1/vqd/list HTTP/1.1
+content-type: application/json
+
+[
+    "1c1f9345fe2e49b497134e260118eccd",
+    "eef3bc50d30f4da293566fe1f022bde0"
+]
+
+###
+
+POST http://113.200.142.236:8012/api/nms/v1/online/camera/get HTTP/1.1
+content-type: application/json
+
+[
+    "1c1f9345fe2e49b497134e260118eccd",
+    "eef3bc50d30f4da293566fe1f022bde0"
+]
